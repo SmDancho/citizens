@@ -17,7 +17,7 @@ const start = async () => {
   try {
     config();
     await mongoose.connect(
-      `mongodb+srv://SmDancho:${process.env.DB_PASS}@nodejstest.1whb64p.mongodb.net/?retryWrites=true&w=majority`
+      `mongodb+srv://SmDancho:PnCLngZLqr69j6gF@nodejstest.1whb64p.mongodb.net/?retryWrites=true&w=majority`
     );
     app.listen(PORT, () => console.log(`server started on port ${PORT}`));
   } catch (e) {
