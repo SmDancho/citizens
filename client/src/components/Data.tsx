@@ -10,7 +10,6 @@ export const DataComponent: FC<hierarchy> = ({ data }) => {
       <Tooltip id="my-tooltip" />
       <div className='city'>
         {data?.map((item: hierarchy, index: number) => {
-          console.log(data[0]?.cityData?.data);
           return (
             <div className="citiy__data" key={index}>
               {!item.data ? (

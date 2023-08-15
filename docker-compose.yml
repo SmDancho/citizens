@@ -1,13 +1,18 @@
 version: '3'
 services:
-  express-app:
+  server:
     container_name: citizens-back
-    build:
-      context: .
-      dockerfile: ./Dockerfile
+    build: ./server
     ports:
       - '5000:5000'
     volumes:
-      - .:/app
-    environment:
-      NODE_ENV: development
+      - ./server:/app
+      - ./server:/node_modules
+  front:
+    container_name: citizens-front
+    ports:
+      - '4000:4000'
+    build: ./client
+    volumes:
+      - ./client:/app
+      - ./client:/node_modules

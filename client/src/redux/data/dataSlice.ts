@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import {api} from '../../utils/axios';
 import type {hierarchy} from "../../types/types"
 export interface DataState {
   data: hierarchy[]; 
@@ -14,9 +14,9 @@ const initialState: DataState = {
 export const getCitizensData = createAsyncThunk(
   'user/getToken',
   async (config: string) => {
-    const data = axios
+    const data = api
       .get(
-        `https://citizens-back-production.up.railway.app/citizens/all?config=${config}`
+        `/?config=${config}`
       )
       .then((response) => {
         return response.data;
