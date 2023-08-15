@@ -14,8 +14,6 @@ export const getCitizens = async (req: Request, res: Response) => {
     const validJSONString = convertTypeCfg?.replace(/'/g, '"');
     const parsedArray = JSON.parse(validJSONString);
   
-    console.log(parsedArray);
-  
     const hierarchy = buildHierarchy(parsedArray, citizens, cities as city[]);
     res.json(hierarchy);
   }catch (e) {
