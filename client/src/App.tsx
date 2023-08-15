@@ -16,7 +16,6 @@ function App() {
   useEffect(() => {
     dispatch(getCitizensData(config));
   }, [config]);
-  console.log(import.meta.env)
   return (
     <>
       <div className="container">
