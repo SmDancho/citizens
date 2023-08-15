@@ -16,7 +16,7 @@ export const getCitizensData = createAsyncThunk(
   async (config: string) => {
     const data = api
       .get(
-        `/?config=${config}`
+        `/citizens/all/?config=${config}`
       )
       .then((response) => {
         return response.data;
