@@ -43,6 +43,4 @@ export const dataSlice = createSlice({
   },
 });
 
-// export const { } = counterSlice.actions;
-
 export default dataSlice.reducer;
